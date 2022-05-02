@@ -6,7 +6,7 @@
 /*   By: yeepark <yeepark@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 17:32:23 by yeepark           #+#    #+#             */
-/*   Updated: 2022/04/23 12:18:26 by yeepark          ###   ########.fr       */
+/*   Updated: 2022/05/02 13:51:00 by yeepark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,7 @@ char	*ft_strstr(char *str, char *to_find)
 	{
 		if (str[i] == to_find[0])
 		{
-			check = ft_strncmp(str + i, to_find, size);
-			if (check == 0)
+			if (!ft_strncmp(str + i, to_find, size))
 				return (str + i);
 		}
 		i ++;
